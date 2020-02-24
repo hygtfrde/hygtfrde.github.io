@@ -1,0 +1,29 @@
+h2 {
+  position: absolute;
+  top: 50px;
+  right: 250px;
+  font-size: 45px;
+  text-decoration: underline;
+
+  -webkit-animation: color-change 3s infinite;
+}
+
+@-webkit-keyframes color-change {
+    0% { color: IndianRed; }
+    10% { color: OrangeRed; }
+    20% { color: LimeGreen; }
+    30% { color: Aqua; }
+    40% { color: Chocolate; }
+    50% { color: Beige; }
+    60% { color: blue; }
+    70% { color: Indigo; }
+    80% { color: DimGrey; }
+    90% { color: Navy}
+    100% { color: Cornsilk; }
+}
+
+.controls {
+  top: 200px;
+  right: 200px;
+  text-decoration: none;
+}
