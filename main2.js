@@ -267,7 +267,8 @@ function movementFunc() {
     if (keys[39] || keys[68]) {
         if (player.velocity_X < player.speed) {
           // player.velocity_X++;
-          player.velocity_X = (player.speed * 10);
+          var s = 5;
+          player.velocity_X = (player.speed * s);
         }
     }
 
@@ -277,7 +278,7 @@ function movementFunc() {
         if ( player.velocity_X > -(player.speed) ) {
           // USE NEGATIVE VALUE TO MOVE LEFT ON CANVAS
           // player.velocity_X--;
-          player.velocity_X = -(player.speed * 10);
+          player.velocity_X = -(player.speed * 5);
 
         }
     }
@@ -382,9 +383,7 @@ function movementFunc() {
 
     if (lionOneDeath == "left" || lionOneDeath == "right" ||
       lionOneDeath == "top" || lionOneDeath == "bottom") {
-      alert("YOU LOSE! --- press enter to RESTART");
-      // window.stop();
-      // window.reload(); 
+      alert("YOU LOSE! --- press enter to RESTART"); 
       player.x = width - 100;
       player.y = height - 15;
       document.location.reload();
@@ -392,9 +391,7 @@ function movementFunc() {
     }
     if (lionTwoDeath == "left" || lionTwoDeath == "right" ||
       lionTwoDeath == "top" || lionTwoDeath == "bottom") {
-      alert("YOU LOSE! --- press enter to RESTART");
-      // window.stop();
-      // window.reload(); 
+      alert("YOU LOSE! --- press enter to RESTART"); 
       player.x = width - 100;
       player.y = height - 15;
       document.location.reload();
@@ -403,8 +400,6 @@ function movementFunc() {
     if (lionThreeDeath == "left" || lionThreeDeath == "right" ||
       lionThreeDeath == "top" || lionThreeDeath == "bottom") {
       alert("YOU LOSE! --- press enter to RESTART");
-      // window.stop();
-      // window.reload(); 
       player.x = width - 100;
       player.y = height - 15;
       document.location.reload();
@@ -413,8 +408,6 @@ function movementFunc() {
     if (fireBallCollision == "left" || fireBallCollision == "right" ||
       fireBallCollision == "top" || fireBallCollision == "bottom") {
       alert("YOU LOSE! --- press enter to RESTART");
-      // window.stop();
-      // window.reload(); 
       player.x = width - 100;
       player.y = height - 15;
       document.location.reload();
@@ -535,15 +528,14 @@ function movementFunc() {
 //------------------------MAKE PLATFORM MOVE----------------------------------//
 //----------------------------------------------------------------------------//
 
-  let lastPlatform = platforms.length - 1;
-  let platformVelocity = 2;
+let lastPlatform = platforms.length - 1;
+let platformVelocity = 2;
 
-  platforms[lastPlatform].y -= platformVelocity;
+platforms[lastPlatform].y -= platformVelocity;
 
-  if (platforms[lastPlatform].y == 300) {
-     platforms[lastPlatform].y = 700;
-   }
-
+if (platforms[lastPlatform].y == 300) {
+  platforms[lastPlatform].y = 700;
+}
 
 //----------------------------------------------------------------------------//
 
