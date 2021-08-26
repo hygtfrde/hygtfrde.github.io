@@ -4,10 +4,19 @@
 
 let canvas = document.getElementById("canvas")
 context = canvas.getContext("2d");
+
+// Static Height/Width
 width = 2000;
 height = 1000;
-canvas.width = width;
 canvas.height = height;
+canvas.width = width; 
+
+// Set Canvas Inner Height/Width 
+// canvas.width = window.innerWidth;
+// canvas.height = window.innerHeight;
+
+// Screen Zoom 
+document.body.style.zoom = 0.5; 
 
 //----------------------------------------------------------------------------//
 
@@ -15,7 +24,7 @@ canvas.height = height;
 //-----------------------------BACKGROUND IMAGE-------------------------------//
 //----------------------------------------------------------------------------//
 
-document.body.style.backgroundImage = "url(images/backgroundImg.jpg)";
+// document.body.style.backgroundImage = "url(images/backgroundImg.jpg)";
 document.body.style.backgroundSize = "1000px 1000px";
 document.body.style.backgroundSize = 'cover';
 
@@ -267,7 +276,7 @@ function movementFunc() {
     if (keys[39] || keys[68]) {
         if (player.velocity_X < player.speed) {
           // player.velocity_X++;
-          player.velocity_X = (player.speed * 10);
+          player.velocity_X = (player.speed * 3);
         }
     }
 
@@ -277,7 +286,7 @@ function movementFunc() {
         if ( player.velocity_X > -(player.speed) ) {
           // USE NEGATIVE VALUE TO MOVE LEFT ON CANVAS
           // player.velocity_X--;
-          player.velocity_X = -(player.speed * 10);
+          player.velocity_X = -(player.speed * 3);
 
         }
     }
@@ -438,8 +447,8 @@ function movementFunc() {
     //   player.height);
 
     let playerImg = new Image();
-    // playerImg.src = "images/walrus.svg";
-    playerImg.src = "images/walkingFox.png";
+    playerImg.src = "images/walrus.svg";
+    // playerImg.src = "images/walkingFox.png";
     context.drawImage(playerImg,
       player.x,
       player.y,
@@ -457,7 +466,7 @@ function movementFunc() {
     context.drawImage(rocket1, rocketObj1.x, rocketObj1.y, fireBall.width, fireBall.height);
 
     let eagle2 = new Image();
-    eagle2.src = "images/eagle.svg";
+    eagle2.src = "images/lion.svg";
     context.drawImage(eagle2, 600, 900, 75, 75);
 
     let fireBall3 = new Image();

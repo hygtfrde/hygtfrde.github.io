@@ -1,4 +1,4 @@
-This is my platform game. PLAYER IT HERE: https://pages.git.generalassemb.ly/hujikolp1/Project_1_Platform_Game/
+This is my platform game. This uses good old JavaScript, HTML, and CSS technology. 
 
 The player is a walrus that needs to jump on platforms up to the star.
 
