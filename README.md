@@ -14,16 +14,18 @@ for side collision the widths and heights must be added into the vectors.
 
 My graphics rely on using the methods rect() and clearRect() from canvas.
 These draw 2-D rectangles on the screen. Separate objects are given the same
-corresponding coordinates and drawn on the canvas with drawImage, which are
+corresponding coordinates and drawn on the canvas with drawImage(), which are
 then checked for collisions.
 
 Checking if the player and an object collide uses a loop that goes over all
 of the existing objects. This seems like an inefficient way to do collision
 detection but it works with a program this size.
 
-Moving enemies are put into the game by changing thier objects coordinates each
+Moving enemies are put into the game by changing their objects' coordinates each
 animation frame.
 --------------------------------------------------------------------------------
+
+NOTES ON IMPROVEMENTS: 
 
 To make this game better, moving platforms could be added. Adding circular or
 elliptical movement to enemy objects would make this harder and more
