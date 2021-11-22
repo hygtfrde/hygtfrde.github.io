@@ -23,6 +23,7 @@ detection but it works with a program this size.
 
 Moving enemies are put into the game by changing their objects' coordinates each
 animation frame.
+
 --------------------------------------------------------------------------------
 
 NOTES ON IMPROVEMENTS: 
