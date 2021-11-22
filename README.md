@@ -5,6 +5,7 @@ The player is a walrus that needs to jump on platforms up to the star.
 If the player gets to the star, they win.
 
 If they run into the eagle, the rocket, or a fireball, they lose.
+
 --------------------------------------------------------------------------------
 
 This uses collision detection on the canvas element. Since canvas has an x and
