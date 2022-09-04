@@ -1,6 +1,6 @@
-This is my platform game. This uses good old JavaScript, HTML, and CSS technology. 
+This is my platform game. This uses good old JavaScript, HTML, and CSS. 
 
-The player is a walrus that needs to jump on platforms up to the star.
+The player needs to jump on platforms up to the star.
 
 If the player gets to the star, they win.
 
