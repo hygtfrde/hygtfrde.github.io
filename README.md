@@ -1,3 +1,9 @@
+# 2D Platform Game
+
+## HTML, JS, and CSS
+
+## To play game, open `index.html` in your browser. 
+
 --------------------------------------------------------------------------------
 
 This uses collision detection on the canvas element. Since canvas has an x and

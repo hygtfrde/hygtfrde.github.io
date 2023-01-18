@@ -1,28 +1,4 @@
-//----------------------------------------------------------------------------//
-//-------------------------------CANVAS---------------------------------------//
-//----------------------------------------------------------------------------//
 
-let canvas = document.getElementById("canvas")
-context = canvas.getContext("2d");
-width = 2000;
-height = 1000;
-canvas.width = width;
-canvas.height = height;
-
-//----------------------------------------------------------------------------//
-
-//----------------------------------------------------------------------------//
-//-----------------------------BACKGROUND IMAGE-------------------------------//
-//----------------------------------------------------------------------------//
-
-document.body.style.backgroundImage = "url(images/backgroundImg.jpg)";
-document.body.style.backgroundSize = "1000px 1000px";
-document.body.style.backgroundSize = 'cover';
-
-(function () {
-    let requestAnimationFrame = window.requestAnimationFrame;
-    window.requestAnimationFrame = requestAnimationFrame;
-})();
 
 //----------------------------------------------------------------------------//
 
@@ -267,8 +243,7 @@ function movementFunc() {
     if (keys[39] || keys[68]) {
         if (player.velocity_X < player.speed) {
           // player.velocity_X++;
-          var s = 5;
-          player.velocity_X = (player.speed * s);
+          player.velocity_X = (player.speed * 3);
         }
     }
 
@@ -278,7 +253,7 @@ function movementFunc() {
         if ( player.velocity_X > -(player.speed) ) {
           // USE NEGATIVE VALUE TO MOVE LEFT ON CANVAS
           // player.velocity_X--;
-          player.velocity_X = -(player.speed * 5);
+          player.velocity_X = -(player.speed * 3);
 
         }
     }
@@ -383,7 +358,9 @@ function movementFunc() {
 
     if (lionOneDeath == "left" || lionOneDeath == "right" ||
       lionOneDeath == "top" || lionOneDeath == "bottom") {
-      alert("YOU LOSE! --- press enter to RESTART"); 
+      alert("YOU LOSE! --- press enter to RESTART");
+      // window.stop();
+      // window.reload(); 
       player.x = width - 100;
       player.y = height - 15;
       document.location.reload();
@@ -391,7 +368,9 @@ function movementFunc() {
     }
     if (lionTwoDeath == "left" || lionTwoDeath == "right" ||
       lionTwoDeath == "top" || lionTwoDeath == "bottom") {
-      alert("YOU LOSE! --- press enter to RESTART"); 
+      alert("YOU LOSE! --- press enter to RESTART");
+      // window.stop();
+      // window.reload(); 
       player.x = width - 100;
       player.y = height - 15;
       document.location.reload();
@@ -400,6 +379,8 @@ function movementFunc() {
     if (lionThreeDeath == "left" || lionThreeDeath == "right" ||
       lionThreeDeath == "top" || lionThreeDeath == "bottom") {
       alert("YOU LOSE! --- press enter to RESTART");
+      // window.stop();
+      // window.reload(); 
       player.x = width - 100;
       player.y = height - 15;
       document.location.reload();
@@ -408,6 +389,8 @@ function movementFunc() {
     if (fireBallCollision == "left" || fireBallCollision == "right" ||
       fireBallCollision == "top" || fireBallCollision == "bottom") {
       alert("YOU LOSE! --- press enter to RESTART");
+      // window.stop();
+      // window.reload(); 
       player.x = width - 100;
       player.y = height - 15;
       document.location.reload();
@@ -431,8 +414,8 @@ function movementFunc() {
     //   player.height);
 
     let playerImg = new Image();
-    // playerImg.src = "images/walrus.svg";
-    playerImg.src = "images/walkingFox.png";
+    playerImg.src = "images/walrus.svg";
+    // playerImg.src = "images/walkingFox.png";
     context.drawImage(playerImg,
       player.x,
       player.y,
@@ -450,7 +433,7 @@ function movementFunc() {
     context.drawImage(rocket1, rocketObj1.x, rocketObj1.y, fireBall.width, fireBall.height);
 
     let eagle2 = new Image();
-    eagle2.src = "images/eagle.svg";
+    eagle2.src = "images/lion.svg";
     context.drawImage(eagle2, 600, 900, 75, 75);
 
     let fireBall3 = new Image();
@@ -528,14 +511,15 @@ function movementFunc() {
 //------------------------MAKE PLATFORM MOVE----------------------------------//
 //----------------------------------------------------------------------------//
 
-let lastPlatform = platforms.length - 1;
-let platformVelocity = 2;
+  let lastPlatform = platforms.length - 1;
+  let platformVelocity = 2;
 
-platforms[lastPlatform].y -= platformVelocity;
+  platforms[lastPlatform].y -= platformVelocity;
 
-if (platforms[lastPlatform].y == 300) {
-  platforms[lastPlatform].y = 700;
-}
+  if (platforms[lastPlatform].y == 300) {
+     platforms[lastPlatform].y = 700;
+   }
+
 
 //----------------------------------------------------------------------------//
 
