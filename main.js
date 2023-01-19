@@ -1,7 +1,3 @@
-//----------------------------------------------------------------------------//
-//-------------------------------CANVAS---------------------------------------//
-//----------------------------------------------------------------------------//
-
 let canvas = document.getElementById("canvas")
 context = canvas.getContext("2d");
 
@@ -11,22 +7,18 @@ height = 1000;
 canvas.height = height;
 canvas.width = width; 
 
+
+
 // Set Canvas Inner Height/Width 
 // canvas.width = window.innerWidth;
 // canvas.height = window.innerHeight;
 
 // Screen Zoom 
-document.body.style.zoom = 0.5; 
+// document.body.style.zoom = 0.5; 
 
-//----------------------------------------------------------------------------//
 
-//----------------------------------------------------------------------------//
-//-----------------------------BACKGROUND IMAGE-------------------------------//
-//----------------------------------------------------------------------------//
-
-// document.body.style.backgroundImage = "url(images/backgroundImg.jpg)";
-document.body.style.backgroundSize = "1000px 1000px";
-document.body.style.backgroundSize = 'cover';
+// document.body.style.backgroundSize = "1000px 1000px";
+// document.body.style.backgroundSize = 'cover';
 
 (function () {
     let requestAnimationFrame = window.requestAnimationFrame;
@@ -448,7 +440,6 @@ function movementFunc() {
 
     let playerImg = new Image();
     playerImg.src = "images/walrus.svg";
-    // playerImg.src = "images/walkingFox.png";
     context.drawImage(playerImg,
       player.x,
       player.y,
