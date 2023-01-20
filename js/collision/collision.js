@@ -1,4 +1,4 @@
-function collisionCheck(playerObj, inanimateObj) {
+const collisionCheck = (playerObj, inanimateObj) => {
     // get the vectors to check against
     // use Half Widths and Half Heights to get the center of each shape
     let X_Vector = (playerObj.x + (playerObj.width / 2)) -

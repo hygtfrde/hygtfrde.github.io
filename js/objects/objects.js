@@ -1,3 +1,11 @@
+width = window.innerWidth - 271;
+height = window.innerHeight - 314;
+
+document.body.onresize = () => {
+    width = window.innerWidth - 271;
+    height = window.innerHeight - 314;
+};
+
 let player = {
     x: width - 100,
     y: height - 15,
