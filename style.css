@@ -1,11 +1,21 @@
+header {
+  margin: 0 auto;
+}
+
 h2 {
-  position: absolute;
-  top: 50px;
-  right: 250px;
   font-size: 45px;
   text-decoration: underline;
-
   -webkit-animation: color-change 3s infinite;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+canvas {
+  margin: 0 auto;
 }
 
 @-webkit-keyframes color-change {
@@ -22,8 +32,6 @@ h2 {
     100% { color: Cornsilk; }
 }
 
-.controls {
-  top: 200px;
-  right: 200px;
-  text-decoration: none;
+footer {
+  margin: 0 auto 30px;
 }
