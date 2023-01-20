@@ -3,7 +3,7 @@ const gravity = 0.25;
 
 keys = [];
 
-function movementFunc() {
+const movementFunc = () => {
 
     //--------------------------------JUMPING-------------------------------------//
     
@@ -21,7 +21,7 @@ function movementFunc() {
         if (keys[39] || keys[68]) {
             if (player.velocity_X < player.speed) {
               // player.velocity_X++;
-              player.velocity_X = (player.speed * 3);
+              player.velocity_X = (player.speed * 1.5);
             }
         }
     
@@ -31,7 +31,7 @@ function movementFunc() {
             if ( player.velocity_X > -(player.speed) ) {
               // USE NEGATIVE VALUE TO MOVE LEFT ON CANVAS
               // player.velocity_X--;
-              player.velocity_X = -(player.speed * 3);
+              player.velocity_X = -(player.speed * 1.5);
     
             }
         }
@@ -284,19 +284,6 @@ function movementFunc() {
     // }
     // requestAnimationFrame(animate);
     
-    //----------------------------------------------------------------------------//
-    //------------------------MAKE PLATFORM MOVE----------------------------------//
-    //----------------------------------------------------------------------------//
-    
-      let lastPlatform = platforms.length - 1;
-      let platformVelocity = 2;
-    
-      platforms[lastPlatform].y -= platformVelocity;
-    
-      if (platforms[lastPlatform].y == 300) {
-         platforms[lastPlatform].y = 700;
-       }
-    
     
     //----------------------------------------------------------------------------//
     
@@ -305,8 +292,23 @@ function movementFunc() {
     //----------------------------------------------------------------------------//
     
         requestAnimationFrame(movementFunc);
+
+
+        // MAKE PLATFORM MOVE
+        // -------------------------------------------------
+        // let lastPlatform = platforms.length - 1;
+        // let platformVelocity = 2;
+      
+        // platforms[lastPlatform].y -= platformVelocity;
+      
+        // if (platforms[lastPlatform].y == 300) {
+        //    platforms[lastPlatform].y = 700;
+        //  }
+        // -------------------------------------------------
     
     } // end movementFunc
+
+
 
     document.body.addEventListener("keydown", function (e) {
         keys[e.keyCode] = true;

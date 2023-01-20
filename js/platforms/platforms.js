@@ -57,58 +57,58 @@ platforms.push({
 //-------------------------------PLATFORMS------------------------------------//
 //----------------------------------------------------------------------------//
 
-platforms.push({
-    x: 1500,
-    y: 900,
-    width: 120,
-    height: 40
-});
-platforms.push({
-    x: 1300,
-    y: 800,
-    width: 120,
-    height: 40
-});
-platforms.push({
-    x: 1100,
-    y: 700,
-    width: 120,
-    height: 40
-});
-platforms.push({
-    x: 900,
-    y: 600,
-    width: 120,
-    height: 40
-});
-platforms.push({
-    x: 700,
-    y: 500,
-    width: 120,
-    height: 40
-});
-platforms.push({
-    x: 500,
-    y: 400,
-    width: 120,
-    height: 40
-});
-platforms.push({
-    x: 300,
-    y: 300,
-    width: 120,
-    height: 40
-});
-platforms.push({
-    x: 100,
-    y: 200,
-    width: 120,
-    height: 40
-});
+// platforms.push({
+//     x: 1500,
+//     y: 900,
+//     width: 120,
+//     height: 40
+// });
+// platforms.push({
+//     x: 1300,
+//     y: 800,
+//     width: 120,
+//     height: 40
+// });
+// platforms.push({
+//     x: 1100,
+//     y: 700,
+//     width: 120,
+//     height: 40
+// });
+// platforms.push({
+//     x: 900,
+//     y: 600,
+//     width: 120,
+//     height: 40
+// });
+// platforms.push({
+//     x: 700,
+//     y: 500,
+//     width: 120,
+//     height: 40
+// });
+// platforms.push({
+//     x: 500,
+//     y: 400,
+//     width: 120,
+//     height: 40
+// });
+// platforms.push({
+//     x: 300,
+//     y: 300,
+//     width: 120,
+//     height: 40
+// });
+// platforms.push({
+//     x: 100,
+//     y: 200,
+//     width: 120,
+//     height: 40
+// });
 
-platforms.push({
-    x: 850,
-    y: 700,
-    width: 40,
-    height: 120
-});
+// platforms.push({
+//     x: 850,
+//     y: 700,
+//     width: 40,
+//     height: 120
+// });
