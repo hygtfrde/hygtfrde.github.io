@@ -178,6 +178,24 @@ const movementFunc = () => {
         }
     
         fireBall.y -= fireBallVelocity_Y;
+
+        // add another fireball
+
+        let fireBallImg2 = new Image();
+        fireBallImg2.src = "images/fireball.png";
+        context.drawImage(fireBallImg2,
+          fireBall2.x + 100, fireBall2.y,
+          fireBall2.width,
+          fireBall2.height);
+    
+        let fireBallVelocity_Y2 = 8;
+    
+        if (fireBall2.y == 8)
+        {
+          fireBall2.y = 800;
+        }
+    
+        fireBall2.y -= fireBallVelocity_Y2;
     
     
     //----------------------------------------------------------------------------//

@@ -23,34 +23,6 @@ let winningStar = {
     y: 20,
     width: 100,
     height: 100
-  }
-  
-let rocketObj1 = {
-    x: 200,
-    y: 900,
-    width: 75,
-    height: 75
-}
-
-let eagleObj2 = {
-    x: 600,
-    y: 900,
-    width: 50,
-    height: 50
-}
-
-let fireObj3 = {
-    x: 700,
-    y: 900,
-    width: 41,
-    height: 41
-}
-
-let fireBall = {
-    x: 600,
-    y: 800,
-    width: 50,
-    height: 50
 }
 
 let star = {
@@ -60,3 +32,18 @@ let star = {
     height: 100,
     touched: false
 };
+
+let fireBall = {
+    x: 600,
+    y: 800,
+    width: 50,
+    height: 50
+}
+
+let fireBall2 = {
+    x: 300,
+    y: 800,
+    width: 50,
+    height: 50
+}
+

@@ -57,12 +57,6 @@ platforms.push({
 //-------------------------------PLATFORMS------------------------------------//
 //----------------------------------------------------------------------------//
 
-// platforms.push({
-//     x: width / 3,
-//     y: height / 2,
-//     width: 100,
-//     height: 20
-// });
 platforms.push({
     x: width / 2,
     y: height / 1.5,
@@ -75,40 +69,3 @@ platforms.push({
     width: 100,
     height: 20
 });
-// platforms.push({
-//     x: 900,
-//     y: 600,
-//     width: 120,
-//     height: 40
-// });
-// platforms.push({
-//     x: 700,
-//     y: 500,
-//     width: 120,
-//     height: 40
-// });
-// platforms.push({
-//     x: 500,
-//     y: 400,
-//     width: 120,
-//     height: 40
-// });
-// platforms.push({
-//     x: 300,
-//     y: 300,
-//     width: 120,
-//     height: 40
-// });
-// platforms.push({
-//     x: 100,
-//     y: 200,
-//     width: 120,
-//     height: 40
-// });
-
-// platforms.push({
-//     x: 850,
-//     y: 700,
-//     width: 40,
-//     height: 120
-// });
