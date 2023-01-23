@@ -70,7 +70,6 @@ const movementFunc = () => {
     
         context.clearRect(0, 0, width, height);
         context.fillStyle = "Aquamarine";
-    
         context.beginPath();
     
     //----------------------------------------------------------------------------//
@@ -120,59 +119,19 @@ const movementFunc = () => {
         if (winningCondition == "left" || winningCondition == "right" ||
           winningCondition == "top" || winningCondition == "bottom") {
           alert("YOU WIN! --- press enter to RESTART");
-          // throw new Error(); is one way to end the program
-          // window.stop(); // reload is better though
-          // window.reload(); 
           player.x = width - 100;
-          player.y = height - 15;
+          player.y = height - 115;
           document.location.reload();
-    
         }
     
-        let lionOneDeath = collisionCheck(player, rocketObj1);
-        let lionTwoDeath = collisionCheck(player, eagleObj2);
-        let lionThreeDeath = collisionCheck(player, fireObj3);
         let fireBallCollision = collisionCheck(player, fireBall);
     
-        if (lionOneDeath == "left" || lionOneDeath == "right" ||
-          lionOneDeath == "top" || lionOneDeath == "bottom") {
-          alert("YOU LOSE! --- press enter to RESTART");
-          // window.stop();
-          // window.reload(); 
-          player.x = width - 100;
-          player.y = height - 15;
-          document.location.reload();
-    
-        }
-        if (lionTwoDeath == "left" || lionTwoDeath == "right" ||
-          lionTwoDeath == "top" || lionTwoDeath == "bottom") {
-          alert("YOU LOSE! --- press enter to RESTART");
-          // window.stop();
-          // window.reload(); 
-          player.x = width - 100;
-          player.y = height - 15;
-          document.location.reload();
-    
-        }
-        if (lionThreeDeath == "left" || lionThreeDeath == "right" ||
-          lionThreeDeath == "top" || lionThreeDeath == "bottom") {
-          alert("YOU LOSE! --- press enter to RESTART");
-          // window.stop();
-          // window.reload(); 
-          player.x = width - 100;
-          player.y = height - 15;
-          document.location.reload();
-    
-        }
         if (fireBallCollision == "left" || fireBallCollision == "right" ||
           fireBallCollision == "top" || fireBallCollision == "bottom") {
           alert("YOU LOSE! --- press enter to RESTART");
-          // window.stop();
-          // window.reload(); 
           player.x = width - 100;
-          player.y = height - 15;
+          player.y = height - 115;
           document.location.reload();
-    
         }
     
     //----------------------------------------------------------------------------//
@@ -183,16 +142,8 @@ const movementFunc = () => {
     
         context.fill();
     
-        // THIS WILL DRAW A BASIC RECTANGLE
-    
-        // context.fillStyle = "gold";
-        // context.fillRect(player.x,
-        //   player.y,
-        //   player.width,
-        //   player.height);
-    
         let playerImg = new Image();
-        playerImg.src = "images/walrus.svg";
+        playerImg.src = "images/player.png";
         context.drawImage(playerImg,
           player.x,
           player.y,
@@ -202,34 +153,8 @@ const movementFunc = () => {
     //----------------------------------------------------------------------------//
     
         let winningTouch = new Image();
-        winningTouch.src = "images/star.svg";
-        context.drawImage(winningTouch, 110, 95, 100, 100);
-    
-        let rocket1 = new Image();
-        rocket1.src = "images/rocket.png";
-        context.drawImage(rocket1, rocketObj1.x, rocketObj1.y, fireBall.width, fireBall.height);
-    
-        let eagle2 = new Image();
-        eagle2.src = "images/lion.svg";
-        context.drawImage(eagle2, 600, 900, 75, 75);
-    
-        let fireBall3 = new Image();
-        fireBall3.src = "images/betterFire.svg";
-        context.drawImage(fireBall3, fireObj3.x, fireObj3.y, fireBall.width, fireBall.height);
-    
-    //----------------------------------------------------------------------------//
-    //-------------------------MAKE LION ONE MOVE---------------------------------//
-    //----------------------------------------------------------------------------//
-    
-        let lionOnevelocity_Y = 15;
-    
-        if (rocketObj1.y == 105)
-        {
-          rocketObj1.y = 900;
-        }
-    
-        rocketObj1.y -= lionOnevelocity_Y;
-    
+        winningTouch.src = "images/star.jpeg";
+        context.drawImage(winningTouch, 20, 20, 100, 100);
     
     //----------------------------------------------------------------------------//
     
@@ -239,38 +164,26 @@ const movementFunc = () => {
     //----------------------------------------------------------------------------//
     
         let fireBallImg = new Image();
-        fireBallImg.src = "images/betterFire.svg";
+        fireBallImg.src = "images/fireball.png";
         context.drawImage(fireBallImg,
-          fireBall.x, fireBall.y,
+          fireBall.x + 40, fireBall.y,
           fireBall.width,
           fireBall.height);
     
-        let fireBallvelocity_Y = 5;
+        let fireBallVelocity_Y = 5;
     
-        if (fireBall.y == 250)
+        if (fireBall.y == 50)
         {
           fireBall.y = 800;
         }
     
-        fireBall.y -= fireBallvelocity_Y;
+        fireBall.y -= fireBallVelocity_Y;
     
     
     //----------------------------------------------------------------------------//
     
-    //----------------------------------------------------------------------------//
-    //------------------------MAKE FIREBALL THREE MOVE----------------------------//
-    //----------------------------------------------------------------------------//
-    
-      let lionThreevelocity_X = 5;
-    
-      if (fireObj3.x == 1400) {
-        fireObj3.x = 700;
-      }
-    
-      fireObj3.x += lionThreevelocity_X;
     
     // CIRCULAR MOVEMENT LOGIC
-    // NEEDS REPAIR TO WORK
     
     
     // let angle = Math.PI / 2;
@@ -283,9 +196,6 @@ const movementFunc = () => {
     //   requestAnimationFrame(newTime => animate(newTime, time));
     // }
     // requestAnimationFrame(animate);
-    
-    
-    //----------------------------------------------------------------------------//
     
     //----------------------------------------------------------------------------//
     //---------------------------REQUEST ANIMATION FRAME--------------------------//
@@ -306,7 +216,7 @@ const movementFunc = () => {
         //  }
         // -------------------------------------------------
     
-    } // end movementFunc
+    } // end movementFunc ------------------------------------------------------------------------------------
 
 
 

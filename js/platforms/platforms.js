@@ -57,24 +57,24 @@ platforms.push({
 //-------------------------------PLATFORMS------------------------------------//
 //----------------------------------------------------------------------------//
 
+// platforms.push({
+//     x: width / 3,
+//     y: height / 2,
+//     width: 100,
+//     height: 20
+// });
+// platforms.push({
+//     x: width / 4,
+//     y: height / 3,
+//     width: 100,
+//     height: 20
+// });
 platforms.push({
-    x: width / 2,
+    x: width / 5,
     y: height / 2,
     width: 100,
     height: 20
 });
-// platforms.push({
-//     x: 1300,
-//     y: 800,
-//     width: 120,
-//     height: 40
-// });
-// platforms.push({
-//     x: 1100,
-//     y: 700,
-//     width: 120,
-//     height: 40
-// });
 // platforms.push({
 //     x: 900,
 //     y: 600,
