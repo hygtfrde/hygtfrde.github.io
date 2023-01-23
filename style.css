@@ -1,11 +1,28 @@
 header {
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-h2 {
+.controls {
+  margin: 0 10%;
+  width: fit-content;
+  padding-bottom: 16px;
+}
+
+.control-items {
+  font-weight: bold;
+}
+
+h1 {
   font-size: 45px;
   text-decoration: underline;
-  -webkit-animation: color-change 3s infinite;
+  margin: 0 auto;
+  animation: color-change 3s infinite;
+}
+
+h3 {
+  font-size: 30px;
 }
 
 body {
@@ -18,7 +35,7 @@ canvas {
   margin: 0 auto;
 }
 
-@-webkit-keyframes color-change {
+@keyframes color-change {
     0% { color: IndianRed; }
     10% { color: OrangeRed; }
     20% { color: LimeGreen; }

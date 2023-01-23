@@ -63,12 +63,12 @@ platforms.push({
 //     width: 100,
 //     height: 20
 // });
-// platforms.push({
-//     x: width / 4,
-//     y: height / 3,
-//     width: 100,
-//     height: 20
-// });
+platforms.push({
+    x: width / 2,
+    y: height / 1.5,
+    width: 100,
+    height: 20
+});
 platforms.push({
     x: width / 5,
     y: height / 2,
