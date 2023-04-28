@@ -133,6 +133,16 @@ const movementFunc = () => {
           player.y = height - 115;
           document.location.reload();
         }
+
+        let fireBallCollision2 = collisionCheck(player, fireBall2);
+    
+        if (fireBallCollision2 == "left" || fireBallCollision2 == "right" ||
+          fireBallCollision2 == "top" || fireBallCollision2 == "bottom") {
+          alert("YOU LOSE! --- press enter to RESTART");
+          player.x = width - 100;
+          player.y = height - 115;
+          document.location.reload();
+        }
     
     //----------------------------------------------------------------------------//
     
@@ -184,7 +194,7 @@ const movementFunc = () => {
         let fireBallImg2 = new Image();
         fireBallImg2.src = "images/fireball.png";
         context.drawImage(fireBallImg2,
-          fireBall2.x + 100, fireBall2.y,
+          fireBall2.x, fireBall2.y,
           fireBall2.width,
           fireBall2.height);
     
@@ -202,7 +212,6 @@ const movementFunc = () => {
     
     
     // CIRCULAR MOVEMENT LOGIC
-    
     
     // let angle = Math.PI / 2;
     // function animate(time, lastTime) {
