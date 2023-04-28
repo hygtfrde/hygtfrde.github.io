@@ -4,6 +4,11 @@
 
 ## To play game, open `index.html` in your browser. 
 
+## Improvements
+- Create a responsive canvas and window size detector, automatically adjusting the object sizes
+- It's okay to use fixed dimensions but this will only work on fixed window sizes
+- Add Level 2, reloading the HTML canvas and objects on a successful Winning Condition of Level 1
+
 --------------------------------------------------------------------------------
 
 This uses collision detection on the canvas element. Since canvas has an x and
