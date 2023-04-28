@@ -1,14 +1,28 @@
 header {
   display: flex;
   align-items: center;
-  flex-direction: column;
+  justify-content: center;
+  flex-direction: row;
   padding-bottom: 16px;
 }
 
 .controls {
+  display: flex;
+  flex-direction: column;
   margin: 0 10%;
   width: fit-content;
   border: 2px solid black;
+  width: 96px;
+}
+
+.controls div {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 8px;
+}
+
+.controls-title {
+  padding: 0 0 24px;
 }
 
 .control-items {
@@ -64,4 +78,5 @@ canvas {
 
 footer {
   margin: 0 auto 30px;
+  padding: 24px 0 0;
 }
