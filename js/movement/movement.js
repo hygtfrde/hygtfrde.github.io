@@ -181,11 +181,11 @@ const movementFunc = () => {
     
         fireBall.y -= fireBallVelocity_Y; 
     
-    //----------------------------------------------------------------------------//
     //---------------------------REQUEST ANIMATION FRAME--------------------------//
+        requestAnimationFrame(movementFunc);
     //----------------------------------------------------------------------------//
     
-        requestAnimationFrame(movementFunc);
+
     }
 
     document.body.addEventListener("keydown", function (e) {
