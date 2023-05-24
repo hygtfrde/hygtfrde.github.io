@@ -1,10 +1,5 @@
-width = window.innerWidth - 271;
-height = window.innerHeight - 314;
-
-document.body.onresize = () => {
-    width = window.innerWidth - 271;
-    height = window.innerHeight - 314;
-};
+width = 600;
+height = 400;
 
 let platforms = [];
 
@@ -58,14 +53,38 @@ platforms.push({
 //----------------------------------------------------------------------------//
 
 platforms.push({
-    x: width / 2,
-    y: height / 1.5,
-    width: 100,
-    height: 20
+    x: width - 500,
+    y: height - 300,
+    width: 50,
+    height: 10
 });
 platforms.push({
-    x: width / 5,
-    y: height / 2,
-    width: 100,
-    height: 20
+    x: width - 400,
+    y: height - 300,
+    width: 50,
+    height: 10
+});
+platforms.push({
+    x: width - 320,
+    y: height - 240,
+    width: 50,
+    height: 10
+});
+platforms.push({
+    x: width - 240,
+    y: height - 180,
+    width: 50,
+    height: 10
+});
+platforms.push({
+    x: width - 160,
+    y: height - 120,
+    width: 50,
+    height: 10
+});
+platforms.push({
+    x: width - 240,
+    y: height - 60,
+    width: 50,
+    height: 10
 });

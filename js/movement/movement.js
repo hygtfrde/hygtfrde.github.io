@@ -1,3 +1,4 @@
+// friction and gravity constants for physics effects
 const friction = 0.7;
 const gravity = 0.25;
 
@@ -20,6 +21,7 @@ const movementFunc = () => {
     
         if (keys[39] || keys[68]) {
             if (player.velocity_X < player.speed) {
+              // include to adjust velocity
               // player.velocity_X++;
               player.velocity_X = (player.speed * 1.5);
             }
@@ -30,9 +32,9 @@ const movementFunc = () => {
         if (keys[37] || keys[65]) {
             if ( player.velocity_X > -(player.speed) ) {
               // USE NEGATIVE VALUE TO MOVE LEFT ON CANVAS
+              // include to adjust velocity
               // player.velocity_X--;
               player.velocity_X = -(player.speed * 1.5);
-    
             }
         }
     
@@ -133,16 +135,6 @@ const movementFunc = () => {
           player.y = height - 115;
           document.location.reload();
         }
-
-        let fireBallCollision2 = collisionCheck(player, fireBall2);
-    
-        if (fireBallCollision2 == "left" || fireBallCollision2 == "right" ||
-          fireBallCollision2 == "top" || fireBallCollision2 == "bottom") {
-          alert("YOU LOSE! --- press enter to RESTART");
-          player.x = width - 100;
-          player.y = height - 115;
-          document.location.reload();
-        }
     
     //----------------------------------------------------------------------------//
     
@@ -163,8 +155,8 @@ const movementFunc = () => {
     //----------------------------------------------------------------------------//
     
         let winningTouch = new Image();
-        winningTouch.src = "images/star.jpeg";
-        context.drawImage(winningTouch, 20, 20, 100, 100);
+        winningTouch.src = "images/star-icon.svg";
+        context.drawImage(winningTouch, 20, 20, 50, 50);
     
     //----------------------------------------------------------------------------//
     
@@ -174,78 +166,27 @@ const movementFunc = () => {
     //----------------------------------------------------------------------------//
     
         let fireBallImg = new Image();
-        fireBallImg.src = "images/fireball.png";
+        fireBallImg.src = "images/betterFire.svg";
         context.drawImage(fireBallImg,
           fireBall.x + 40, fireBall.y,
           fireBall.width,
           fireBall.height);
     
-        let fireBallVelocity_Y = 5;
+        let fireBallVelocity_Y = 4;
     
-        if (fireBall.y == 50)
+        if (fireBall.y == 8)
         {
           fireBall.y = 800;
         }
     
-        fireBall.y -= fireBallVelocity_Y;
-
-        // add another fireball
-
-        let fireBallImg2 = new Image();
-        fireBallImg2.src = "images/fireball.png";
-        context.drawImage(fireBallImg2,
-          fireBall2.x, fireBall2.y,
-          fireBall2.width,
-          fireBall2.height);
-    
-        let fireBallVelocity_Y2 = 8;
-    
-        if (fireBall2.y == 8)
-        {
-          fireBall2.y = 800;
-        }
-    
-        fireBall2.y -= fireBallVelocity_Y2;
-    
-    
-    //----------------------------------------------------------------------------//
-    
-    
-    // CIRCULAR MOVEMENT LOGIC
-    
-    // let angle = Math.PI / 2;
-    // function animate(time, lastTime) {
-    //   if (lastTime != null) {
-    //     angle += (time - lastTime) * 0.001;
-    //   }
-    //   fireObj3.y = (Math.sin(angle) * 20) + "px";
-    //   fireObj3.x = (Math.cos(angle) * 200) + "px";
-    //   requestAnimationFrame(newTime => animate(newTime, time));
-    // }
-    // requestAnimationFrame(animate);
+        fireBall.y -= fireBallVelocity_Y; 
     
     //----------------------------------------------------------------------------//
     //---------------------------REQUEST ANIMATION FRAME--------------------------//
     //----------------------------------------------------------------------------//
     
         requestAnimationFrame(movementFunc);
-
-
-        // MAKE PLATFORM MOVE
-        // -------------------------------------------------
-        // let lastPlatform = platforms.length - 1;
-        // let platformVelocity = 2;
-      
-        // platforms[lastPlatform].y -= platformVelocity;
-      
-        // if (platforms[lastPlatform].y == 300) {
-        //    platforms[lastPlatform].y = 700;
-        //  }
-        // -------------------------------------------------
-    
-    } // end movementFunc ------------------------------------------------------------------------------------
-
-
+    }
 
     document.body.addEventListener("keydown", function (e) {
         keys[e.keyCode] = true;

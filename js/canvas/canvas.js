@@ -2,16 +2,11 @@
 let canvas = document.getElementById("canvas")
 context = canvas.getContext("2d");
 
-canvas.width = window.innerWidth - (271);
-canvas.height = window.innerHeight - (314);
+canvas.width = 600;
+canvas.height = 400;
 
-document.body.onresize = () => {
-        canvas.width = window.innerWidth - (271);
-        canvas.height = window.innerHeight - (314);
-}
-
-if (window.innerWidth <= 500 || window.innerHeight <= 500) {
-    alert('window too small, please use a larger size')
+if (window.innerWidth <= 400 || window.innerHeight <= 400) {
+    alert('Browser window too small, please use a larger view')
 }
 
 (function () {

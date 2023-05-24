@@ -7,10 +7,6 @@ const collisionCheck = (playerObj, inanimateObj) => {
     let Y_Vector = (playerObj.y + (playerObj.height / 2)) -
       (inanimateObj.y + (inanimateObj.height / 2));
 
-//----------------------------------------------------------------------------//
-//----------------------HALF WIDTH AND HALF HEIGHT----------------------------//
-//----------------------------------------------------------------------------//
-
     let halfWidths = (playerObj.width / 2) + (inanimateObj.width / 2);
     let halfHeights = (playerObj.height / 2) + (inanimateObj.height / 2);
     let directionection = null;
@@ -73,5 +69,4 @@ const collisionCheck = (playerObj, inanimateObj) => {
     }
 
     return directionection;
-
-} //  end collisionCheck
+}
