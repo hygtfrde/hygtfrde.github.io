@@ -155,9 +155,9 @@ const movementFunc = () => {
         context.drawImage(
             bottomFire,
             10,
-            380,
+            370,
             600,
-            25
+            35
         );
     
     //----------------------------WINNING STAR TOUCH------------------------------//
@@ -190,13 +190,14 @@ const movementFunc = () => {
 
     //-------------------------MAKE PLATFORMS MOVE--------------------------------//
 
-        if (platforms[4].y == 300)
+        //-----------------------
+        if (platforms[4].y == 280)
         {
           platforms[4].y = 100;
         }
         platforms[4].y += 1; 
         //-----------------------
-        if (platforms[8].x == 200)
+        if (platforms[8].x == 180)
         {
           platforms[8].x = 440;
         }
