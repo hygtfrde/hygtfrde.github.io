@@ -1,14 +1,9 @@
 width = 600;
 height = 400;
 
-// document.body.onresize = () => {
-//     width = window.innerWidth - 271;
-//     height = window.innerHeight - 314;
-// };
-
 let player = {
-    x: width - 40,
-    y: height - 15,
+    x: width - 68,
+    y: height - 160,
     width: 25,
     height: 25,
     speed: 3,
@@ -30,5 +25,12 @@ let fireBall = {
     y: height - 200,
     width: 50,
     height: 50
+}
+
+let bottomBound = {
+    x: 0,
+    y: height - 11,
+    width: width,
+    height: 1
 }
 

@@ -38,7 +38,6 @@ const movementFunc = () => {
             }
         }
     
-    //----------------------------------------------------------------------------//
     //---------------REALISM EFFECTS OF GRAVITY AND FRICTION----------------------//
     //---------------------X VELOCITY WILL APPROACH 0-----------------------------//
     //--------------Y VELOCITY WILL GO DOWN WITH POSITIVE VALUES------------------//
@@ -46,10 +45,7 @@ const movementFunc = () => {
     
         player.velocity_X *= friction;
         player.velocity_Y += gravity;
-    
-    //----------------------------------------------------------------------------//
-    
-    //----------------------------------------------------------------------------//
+        
     //-------------------------GROUNDED STOPS ALL Y MOVEMENT----------------------//
     //----------------------------------------------------------------------------//
     
@@ -57,7 +53,6 @@ const movementFunc = () => {
              player.velocity_Y = 0;
         }
     
-    //----------------------------------------------------------------------------//
     //-------------------------UPDATE X AND Y POSITION----------------------------//
     //--------------------------EACH ANIMATION FRAME------------------------------//
     //----------------------------------------------------------------------------//
@@ -65,7 +60,6 @@ const movementFunc = () => {
         player.x += player.velocity_X;
         player.y += player.velocity_Y;
     
-    //----------------------------------------------------------------------------//
     //-------------------DELETE OLD FRAMES WITH CLEAR RECT ()---------------------//
     //-----------------------------AND BEGIN PATH ()------------------------------//
     //----------------------------------------------------------------------------//
@@ -74,13 +68,11 @@ const movementFunc = () => {
         context.fillStyle = "Aquamarine";
         context.beginPath();
     
-    //----------------------------------------------------------------------------//
     //---------------------PREVENT WALKING OFF PLATFORMS--------------------------//
     //----------------------------------------------------------------------------//
     
         player.grounded = false;
     
-    //----------------------------------------------------------------------------//
     //--------------------LOOP FOR COLLISIONS ON EACH PLATFORM--------------------//
     //----------------------------------------------------------------------------//
     
@@ -109,10 +101,7 @@ const movementFunc = () => {
             }
     
         }
-    
-    //----------------------------------------------------------------------------//
-    
-    //----------------------------------------------------------------------------//
+        
     //-------------------------HOW TO WIN AND HOW TO LOSE-------------------------//
     //----------------------------------------------------------------------------//
     
@@ -126,8 +115,8 @@ const movementFunc = () => {
           document.location.reload();
         }
     
+        /*
         let fireBallCollision = collisionCheck(player, fireBall);
-    
         if (fireBallCollision == "left" || fireBallCollision == "right" ||
           fireBallCollision == "top" || fireBallCollision == "bottom") {
           alert("YOU LOSE! --- press enter to RESTART");
@@ -135,24 +124,43 @@ const movementFunc = () => {
           player.y = height - 115;
           document.location.reload();
         }
-    
-    //----------------------------------------------------------------------------//
-    
-    //----------------------------------------------------------------------------//
+        */
+
+        let bottomBoundCollision = collisionCheck(player, bottomBound);
+        if (bottomBoundCollision == "top" || bottomBoundCollision == "right" ||
+        bottomBoundCollision == "top" || bottomBoundCollision == "bottom") {
+            alert("YOU LOSE! --- press enter to RESTART");
+            player.x = width - 68;
+            player.y = height - 160;
+            document.location.reload();
+        }
+        
     //--------------------DRAW THE PLAYER AND OBJECTS-----------------------------//
     //----------------------------------------------------------------------------//
     
         context.fill();
     
-        let playerImg = new Image();
+        const playerImg = new Image();
         playerImg.src = "images/player.png";
-        context.drawImage(playerImg,
-          player.x,
-          player.y,
-          player.width,
-          player.height);
+        context.drawImage(
+            playerImg,
+            player.x,
+            player.y,
+            player.width,
+            player.height
+        );
+
+        const bottomFire = new Image();
+        bottomFire.src = "images/flame-icon.svg";
+        context.drawImage(
+            bottomFire,
+            10,
+            380,
+            600,
+            25
+        );
     
-    //----------------------------------------------------------------------------//
+    //----------------------------WINNING STAR TOUCH------------------------------//
     
         let winningTouch = new Image();
         winningTouch.src = "images/star-icon.svg";
@@ -161,10 +169,10 @@ const movementFunc = () => {
     //----------------------------------------------------------------------------//
     
     
-    //----------------------------------------------------------------------------//
     //-------------------------MAKE FIREBALL MOVE---------------------------------//
     //----------------------------------------------------------------------------//
     
+    /*
         let fireBallImg = new Image();
         fireBallImg.src = "images/betterFire.svg";
         context.drawImage(fireBallImg,
@@ -180,6 +188,37 @@ const movementFunc = () => {
         }
     
         fireBall.y -= fireBallVelocity_Y; 
+    */
+
+
+    //-------------------------MAKE PLATFORMS MOVE--------------------------------//
+
+        if (platforms[4].y == 10 || platforms[4].y == 400)
+        {
+          platforms[4].y = 100;
+        }
+        // platforms[4].y += 1; 
+        //-----------------------
+        if (platforms[5].x == 10 || platforms[5].x == 550)
+        {
+          platforms[5].x = 200;
+        }
+        // platforms[5].x += 1; 
+        //-----------------------
+        if (platforms[7].x == 10 || platforms[7].x == 550)
+        {
+          platforms[7].x = 360;
+        }
+        // platforms[7].x -= 1; 
+        //-----------------------
+        if (platforms[8].x == 10 || platforms[8].x == 550)
+        {
+          platforms[8].x = 360;
+        }
+        // platforms[8].x -= 1; 
+        //-----------------------
+
+        //-----------------------
     
     //---------------------------REQUEST ANIMATION FRAME--------------------------//
         requestAnimationFrame(movementFunc);

@@ -83,7 +83,25 @@ platforms.push({
     height: 10
 });
 platforms.push({
-    x: width - 240,
+    x: width - 80,
+    y: height - 60,
+    width: 50,
+    height: 10
+});
+platforms.push({
+    x: width - 460,
+    y: height - 60,
+    width: 50,
+    height: 10
+});
+platforms.push({
+    x: width - 360,
+    y: height - 60,
+    width: 50,
+    height: 10
+});
+platforms.push({
+    x: width - 260,
     y: height - 60,
     width: 50,
     height: 10

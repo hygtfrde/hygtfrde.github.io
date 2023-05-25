@@ -5,8 +5,8 @@ context = canvas.getContext("2d");
 canvas.width = 600;
 canvas.height = 400;
 
-if (window.innerWidth <= 400 || window.innerHeight <= 400) {
-    alert('Browser window too small, please use a larger view')
+if (window.innerWidth <= 615 || window.innerHeight <= 515) {
+    alert('Browser window too small, please expand to a larger view')
 }
 
 (function () {
