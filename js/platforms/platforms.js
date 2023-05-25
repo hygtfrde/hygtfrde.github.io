@@ -59,19 +59,19 @@ platforms.push({
     height: 10
 });
 platforms.push({
-    x: width - 400,
+    x: width - 420,
     y: height - 300,
     width: 50,
     height: 10
 });
 platforms.push({
-    x: width - 320,
+    x: width - 340,
     y: height - 240,
     width: 50,
     height: 10
 });
 platforms.push({
-    x: width - 240,
+    x: width - 260,
     y: height - 180,
     width: 50,
     height: 10
@@ -89,13 +89,13 @@ platforms.push({
     height: 10
 });
 platforms.push({
-    x: width - 460,
+    x: width - 580,
     y: height - 60,
     width: 50,
     height: 10
 });
 platforms.push({
-    x: width - 360,
+    x: width - 420,
     y: height - 60,
     width: 50,
     height: 10

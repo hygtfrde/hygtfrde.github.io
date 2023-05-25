@@ -115,7 +115,7 @@ const movementFunc = () => {
           document.location.reload();
         }
     
-        /*
+    /*
         let fireBallCollision = collisionCheck(player, fireBall);
         if (fireBallCollision == "left" || fireBallCollision == "right" ||
           fireBallCollision == "top" || fireBallCollision == "bottom") {
@@ -124,7 +124,7 @@ const movementFunc = () => {
           player.y = height - 115;
           document.location.reload();
         }
-        */
+    */
 
         let bottomBoundCollision = collisionCheck(player, bottomBound);
         if (bottomBoundCollision == "top" || bottomBoundCollision == "right" ||
@@ -179,45 +179,28 @@ const movementFunc = () => {
           fireBall.x + 40, fireBall.y,
           fireBall.width,
           fireBall.height);
-    
         let fireBallVelocity_Y = 4;
-    
         if (fireBall.y == 8)
         {
           fireBall.y = 800;
         }
-    
         fireBall.y -= fireBallVelocity_Y; 
     */
 
 
     //-------------------------MAKE PLATFORMS MOVE--------------------------------//
 
-        if (platforms[4].y == 10 || platforms[4].y == 400)
+        if (platforms[4].y == 300)
         {
           platforms[4].y = 100;
         }
-        // platforms[4].y += 1; 
+        platforms[4].y += 1; 
         //-----------------------
-        if (platforms[5].x == 10 || platforms[5].x == 550)
+        if (platforms[8].x == 200)
         {
-          platforms[5].x = 200;
+          platforms[8].x = 440;
         }
-        // platforms[5].x += 1; 
-        //-----------------------
-        if (platforms[7].x == 10 || platforms[7].x == 550)
-        {
-          platforms[7].x = 360;
-        }
-        // platforms[7].x -= 1; 
-        //-----------------------
-        if (platforms[8].x == 10 || platforms[8].x == 550)
-        {
-          platforms[8].x = 360;
-        }
-        // platforms[8].x -= 1; 
-        //-----------------------
-
+        platforms[8].x -= 1; 
         //-----------------------
     
     //---------------------------REQUEST ANIMATION FRAME--------------------------//
