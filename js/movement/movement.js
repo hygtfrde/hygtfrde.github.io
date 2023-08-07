@@ -37,6 +37,59 @@ const movementFunc = () => {
               player.velocity_X = -(player.speed * 1.5);
             }
         }
+
+    //-------------------------------MOVEMENT BUTTONS------------------------------------//
+
+        const upButton = document.getElementById("upButton");
+        const rightButton = document.getElementById("rightButton");
+        const leftButton = document.getElementById("leftButton");
+        
+        upButton.addEventListener("click", () => {
+            if ((player.jumping) == false && (player.grounded == true) ) {
+                player.jumping = true;
+                player.grounded = false;
+                // USE NEGATIVE VALUE TO MOVE UP ON CANVAS
+                player.velocity_Y = -(player.speed * 2);
+            }        
+        });
+        
+        rightButton.addEventListener("click", () => {
+            player.velocity_X = (player.speed * 1.5);
+        });
+        
+        leftButton.addEventListener("click", () => {
+            player.velocity_X = -(player.speed * 1.5);
+        });
+
+        // Holding down buttons, mousedown event
+
+        let movementInterval;
+
+        upButton.addEventListener("mousedown", () => {
+            if ((player.jumping) == false && (player.grounded == true) ) {
+                player.jumping = true;
+                player.grounded = false;
+                // USE NEGATIVE VALUE TO MOVE UP ON CANVAS
+                player.velocity_Y = -(player.speed * 2);
+            }
+        });
+
+        rightButton.addEventListener("mousedown", () => {
+        movementInterval = setInterval(() => {
+            player.velocity_X = (player.speed * 2);
+        }, 100);
+        });
+
+        leftButton.addEventListener("mousedown", () => {
+        movementInterval = setInterval(() => {
+            player.velocity_X = -(player.speed * 2);
+        }, 100);
+        });
+
+        document.addEventListener("mouseup", () => {
+        clearInterval(movementInterval);
+        });
+        
     
     //---------------REALISM EFFECTS OF GRAVITY AND FRICTION----------------------//
     //---------------------X VELOCITY WILL APPROACH 0-----------------------------//
@@ -85,7 +138,7 @@ const movementFunc = () => {
             let direction = collisionCheck(player, platforms[i]);
     
             if (direction === "left" || direction === "right") {
-                // STOP VELOCITYX IF COLLISION LEFT OR RIGHT
+                // STOP VELOCITY_X IF COLLISION LEFT OR RIGHT
                 player.velocity_X = 0;
                 player.jumping = false;
             }
@@ -96,7 +149,7 @@ const movementFunc = () => {
             }
             else if (direction === "top") {
                 // PLAYER HIT HEAD BY JUMPING
-                // SWITCH VELOCITYY IF TOP COLLISION
+                // SWITCH VELOCITY_Y IF TOP COLLISION
                 player.velocity_Y *= -1;
             }
     

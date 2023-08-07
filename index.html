@@ -10,7 +10,8 @@
     <div>
       <h1 class="controls-title">Controls</h1>
     </div>
-    <div class="controls">
+
+    <!-- <div class="controls">
       <div>
         <span class="control-items">JUMP: </span>
         <span>W</span>
@@ -23,10 +24,20 @@
         <span class="control-items">RIGHT: </span>
         <span>D</span>
       </div>
-    </div>
+    </div> -->
   </header>
 
   <body>
+
+    <div class="movement-buttons">
+      <button id="leftButton">&larr; A</button>
+      <div class="up-button-container">
+        <button id="upButton">&uarr; W</button>
+      </div>
+      <button id="rightButton">&rarr; D</button>
+    </div>
+    
+
     <canvas id="canvas" style="border:1px solid black"></canvas>
     <script src="./js/canvas/canvas.js"></script>
     <script src="./js/collision/collision.js"></script>
